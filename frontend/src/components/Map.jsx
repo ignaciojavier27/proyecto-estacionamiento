@@ -3,6 +3,9 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { obtenerCoordenadas } from '../helpers/obtenerCoordenadas';
 
 const Map = () => {
+
+  const URL_ESTACIONAMIENTOS = 'http://localhost:5000/api/estacionamientos';
+
   const defaultMapPosition = [-34.9854011, -71.2397409];
 
   const [estacionamientos, setEstacionamientos] = useState([]);
@@ -11,7 +14,7 @@ const Map = () => {
   useEffect(() => {
     const fetchEstacionamientos = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/estacionamientos');
+        const response = await fetch(URL_ESTACIONAMIENTOS);
         const data = await response.json();
 
         const estacionamientosConCoordenadas = await Promise.all(

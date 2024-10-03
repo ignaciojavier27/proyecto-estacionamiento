@@ -1,10 +1,10 @@
 import express, { json } from 'express';
 import cors from 'cors';
-import { sequelize, connectDB } from './config/database.js';
 import { config }  from 'dotenv';
+import { sequelize, connectDB } from './config/database.js';
+import { syncModels } from './config/syncModel.js';
 
 config();
-
 
 
 
@@ -16,6 +16,7 @@ app.use(cors());
 app.use(json());
 
 connectDB();
+syncModels();
 
 
 app.listen(port, () => {

@@ -4,6 +4,8 @@ import { config }  from 'dotenv';
 import { sequelize, connectDB } from './config/database.js';
 import { syncModels } from './config/syncModel.js';
 import usuarioRoutes from './routes/usuarioRouter.js';
+import estacionamientoRoutes from './routes/estacionamientoRouter.js';
+
 
 config();
 
@@ -17,8 +19,7 @@ connectDB();
 syncModels();
 
 app.use('/api', usuarioRoutes);
-
-
+app.use('/api', estacionamientoRoutes);
 
 
 app.listen(port, () => {

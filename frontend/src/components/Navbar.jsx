@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import '../assets/styles/navbar.css';
 const Navbar = () => {
     return (
@@ -17,29 +18,18 @@ const Navbar = () => {
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <a className="navbar-brand mt-2 mt-lg-0">
-                    <img
-                    src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-                    height="15"
-                    alt="MDB Logo"
-                    loading="lazy"
-                    />
-                </a>
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <a className="nav-link">
-                        Servicios
-                    </a>
+                        <NavLink to='/' className="nav-link">Inicio</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link">
-                        Propietarios
-                    </a>
+                        <NavLink to='/services' className="nav-link">Servicios</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link">
-                        Ingresa
-                    </a>
+                        <NavLink to='/owners' className="nav-link">Propietarios</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to='/login' className="nav-link">Ingresa</NavLink>
                     </li>
                 </ul>
                 </div>

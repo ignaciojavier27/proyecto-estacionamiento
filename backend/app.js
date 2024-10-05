@@ -5,6 +5,7 @@ import { sequelize, connectDB } from './config/database.js';
 import { syncModels } from './config/syncModel.js';
 import usuarioRoutes from './routes/usuarioRouter.js';
 import estacionamientoRoutes from './routes/estacionamientoRouter.js';
+import authRoutes from './routes/authRouter.js';
 
 
 config();
@@ -20,6 +21,7 @@ syncModels();
 
 app.use('/api', usuarioRoutes);
 app.use('/api', estacionamientoRoutes);
+app.use('/api/auth', authRoutes);
 
 
 app.listen(port, () => {

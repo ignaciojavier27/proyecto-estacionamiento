@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import { obtenerCoordenadas } from '../helpers/obtenerCoordenadas';
+import MarcadorEstacionamiento from './MarcadorEstacionamiento';
 
 const Map = () => {
   const defaultMapPosition = [-34.9854011, -71.2397409];
@@ -39,13 +40,9 @@ const Map = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        {estacionamientos.map((estacionamiento, index) => (
+        {estacionamientos.map((estacionamiento) => (
           estacionamiento.coordenadas && (
-            <Marker key={index} position={[estacionamiento.coordenadas.latitud, estacionamiento.coordenadas.longitud]}>
-              <Popup>
-                {estacionamiento.nombre} <br /> Dirección: {estacionamiento.direccion}
-              </Popup>
-            </Marker>
+            <MarcadorEstacionamiento key={estacionamiento.id * 10} estacionamiento={estacionamiento}/>
           )
         ))}
         </MapContainer>

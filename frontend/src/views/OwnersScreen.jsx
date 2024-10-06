@@ -1,11 +1,9 @@
-import Navbar from "../components/Navbar"
 import '../assets/styles/owners.css'
 
 
 const OwnersScreen = () => {
   return (
     <main>
-      <Navbar />
       <section className="container-desarrollo container-full bg-white py-5">
         <article className="container-md container-desarrollo-info">
           <h2>Promociona tu estacionamiento y aumenta tus ingresos</h2>
@@ -66,7 +64,7 @@ const OwnersScreen = () => {
             Únete a nuestra plataforma y empieza a gestionar tus estacionamientos de manera más eficiente.
             Es rápido, fácil y seguro.
           </p>
-          <button className="btn btn-primary mt-4">Registrarse como Propietario</button>
+          <button className="btn btn-primary mt-4">Registrarse</button>
         </div>
       </section>
     </main>

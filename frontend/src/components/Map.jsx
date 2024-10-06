@@ -40,9 +40,9 @@ const Map = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        {estacionamientos.map((estacionamiento) => (
+        {estacionamientos.map((estacionamiento) => (          
           estacionamiento.coordenadas && (
-            <MarcadorEstacionamiento key={estacionamiento.id * 10} estacionamiento={estacionamiento}/>
+            <MarcadorEstacionamiento key={estacionamiento.estacionamiento_id * 1.1} estacionamiento={estacionamiento}/>
           )
         ))}
         </MapContainer>

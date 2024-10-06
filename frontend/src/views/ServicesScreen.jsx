@@ -1,10 +1,8 @@
-import Navbar from "../components/Navbar"
 import '../assets/styles/services.css'
 
 const ServicesScreen = () => {
     return (
     <main>
-        <Navbar />
         <section className="container-desarrollo container-full bg-white  py-5">
             <article className="container-md container-desarrollo-info">
             <img src="../../src/assets/images/line-curve.svg" alt="line-curve" className="line-curve" />

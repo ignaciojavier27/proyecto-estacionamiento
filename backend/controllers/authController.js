@@ -32,6 +32,7 @@ export const signUp = async (req, res) => {
   }
 };
 
+
 // Iniciar Sesión (Log In)
 export const logIn = async (req, res) => {
   try {
@@ -56,7 +57,15 @@ export const logIn = async (req, res) => {
       { expiresIn: '1h' }  // Token expira en 1 hora
     );
 
-    res.status(200).json({ mensaje: 'Inicio de sesión exitoso', token });
+    // Enviar el token y los datos del usuario
+    res.status(200).json({
+      mensaje: 'Inicio de sesión exitoso',
+      token,
+      usuario: {
+        tipo_usuario: usuario.tipo_usuario, // Aquí aseguramos que enviamos tipo_usuario
+        correo_electronico: usuario.correo_electronico, // También puedes enviar otros detalles si los necesitas
+      }
+    });
   } catch (error) {
     res.status(500).json({ error: 'Error al iniciar sesión', detalle: error.message });
   }

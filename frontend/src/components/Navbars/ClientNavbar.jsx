@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import '../assets/styles/navbar.css';
-const Navbar = () => {
+import '../../assets/styles/navbar.css';
+const ClientNavbar = () => {
     return (
     <div className="container-fluid p-0 m-0">
         <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary ">
@@ -26,13 +26,10 @@ const Navbar = () => {
                         <NavLink to='/services' className="nav-link">Servicios</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to='/owners' className="nav-link">Propietarios</NavLink>
+                        <NavLink to='/owners' className="nav-link">Historial</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to='/signin' className="nav-link">Registrar</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink to='/login' className="nav-link">Ingresar</NavLink>
+                        <NavLink to='/logout' className="nav-link">Cerrar Sesión</NavLink>
                     </li>
                 </ul>
                 </div>
@@ -43,4 +40,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default ClientNavbar;

@@ -10,6 +10,7 @@ import ClientNavbar from './components/Navbars/ClientNavbar';
 import OwnerNavbar from './components/Navbars/OwnerNavbar';
 import Navbar from './components/Navbar';
 import OwnerEstacionamientosScreen from './views/OwnerEstacionamientosScreen';
+import HistoryClientScreen from './views/HistoryClientScreen';
 function App() {
 
   const [userType, setUserType] = useState("");
@@ -36,6 +37,8 @@ function App() {
         <Route path='/' element={<MainScreen />} />
         <Route path='/services' element={<ServicesScreen />} />
         <Route path='/*' element={<Navigate to='/'/>} />
+
+        <Route path='/client/history' element={<HistoryClientScreen />} />
 
         <Route path='/owners' element={<OwnersScreen />} />
         <Route path='/owners/parking' element={<OwnerEstacionamientosScreen />} />

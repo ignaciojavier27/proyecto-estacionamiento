@@ -23,10 +23,7 @@ const ClientNavbar = () => {
                         <NavLink to='/' className="nav-link">Inicio</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to='/services' className="nav-link">Servicios</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink to='/owners' className="nav-link">Historial</NavLink>
+                        <NavLink to='/client/history' className="nav-link">Historial</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to='/logout' className="nav-link">Cerrar Sesión</NavLink>

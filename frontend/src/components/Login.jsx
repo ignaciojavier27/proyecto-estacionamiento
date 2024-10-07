@@ -48,7 +48,7 @@ const Login = ({ setUserType }) => {
       <input
         type="email"
         className="form-control mb-3"
-        placeholder="Correo electrónico"
+        placeholder="correo@example.com"
         id="correo-log-input"
         value={correo_electronico}
         onChange={(e) => setCorreoElectronico(e.target.value)}
@@ -64,7 +64,7 @@ const Login = ({ setUserType }) => {
         value={contrasenia}
         onChange={(e) => setContrasenia(e.target.value)}
       />
-      <button className="btn btn-primary" type="submit">
+      <button className="btn btn-dark" type="submit">
         Iniciar Sesión
       </button>
       {error && <p>{error}</p>}

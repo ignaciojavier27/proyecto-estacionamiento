@@ -24,6 +24,7 @@ const Login = ({ setUserType }) => {
   
       if (response.ok) {
         localStorage.setItem("token", data.token);
+        localStorage.setItem("usuario", JSON.stringify(data.usuario)); 
         setUserType(data.usuario.tipo_usuario);
 
         if (data.usuario.tipo_usuario === "cliente") {

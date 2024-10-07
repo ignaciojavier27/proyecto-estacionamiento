@@ -50,20 +50,19 @@ export const logIn = async (req, res) => {
       return res.status(400).json({ error: 'Contraseña incorrecta' });
     }
 
-    // Generar token JWT
     const token = jwt.sign(
       { usuarioId: usuario.usuario_id, tipo_usuario: usuario.tipo_usuario },
       process.env.JWT_SECRET,
-      { expiresIn: '1h' }  // Token expira en 1 hora
+      { expiresIn: '1h' }
     );
 
-    // Enviar el token y los datos del usuario
     res.status(200).json({
       mensaje: 'Inicio de sesión exitoso',
       token,
       usuario: {
-        tipo_usuario: usuario.tipo_usuario, // Aquí aseguramos que enviamos tipo_usuario
-        correo_electronico: usuario.correo_electronico, // También puedes enviar otros detalles si los necesitas
+        usuario_id: usuario.usuario_id,
+        tipo_usuario: usuario.tipo_usuario,
+        correo_electronico: usuario.correo_electronico,
       }
     });
   } catch (error) {

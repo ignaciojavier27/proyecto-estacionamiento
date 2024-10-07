@@ -9,6 +9,7 @@ import LogoutScreen from './views/LogoutScreen';
 import ClientNavbar from './components/Navbars/ClientNavbar';
 import OwnerNavbar from './components/Navbars/OwnerNavbar';
 import Navbar from './components/Navbar';
+import OwnerEstacionamientosScreen from './views/OwnerEstacionamientosScreen';
 function App() {
 
   const [userType, setUserType] = useState("");
@@ -32,13 +33,17 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path='/' element={<MainScreen />}></Route>
-        <Route path='/services' element={<ServicesScreen />}></Route>
-        <Route path='/owners' element={<OwnersScreen />}></Route>
-        <Route path='/signin' element={<RegisterScreen />}></Route>
-        <Route path='/login' element={<LoginScreen setUserType={setUserType} />}></Route>
-        <Route path='/logout' element={<LogoutScreen setUserType={setUserType} />}></Route>
-        <Route path='/*' element={<Navigate to='/'/>}></Route>
+        <Route path='/' element={<MainScreen />} />
+        <Route path='/services' element={<ServicesScreen />} />
+        <Route path='/*' element={<Navigate to='/'/>} />
+
+        <Route path='/owners' element={<OwnersScreen />} />
+        <Route path='/owners/parking' element={<OwnerEstacionamientosScreen />} />
+
+        <Route path='/signup' element={<RegisterScreen />} />
+        <Route path='/login' element={<LoginScreen setUserType={setUserType} />} />
+        <Route path='/logout' element={<LogoutScreen setUserType={setUserType} />} />
+        
       </Routes>
 
     </>

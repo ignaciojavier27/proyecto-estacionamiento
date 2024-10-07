@@ -23,7 +23,7 @@ const OwnerNavbar = () => {
                         <NavLink to='/' className="nav-link">Inicio</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to='/services' className="nav-link">Estacionamientos</NavLink>
+                        <NavLink to='/owners/parking' className="nav-link">Estacionamientos</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to='/logout' className="nav-link">Cerrar Sesión</NavLink>

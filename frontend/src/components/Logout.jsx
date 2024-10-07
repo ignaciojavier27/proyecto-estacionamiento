@@ -7,6 +7,7 @@ const Logout = ({ setUserType }) => {
 
   useEffect(() => {
     localStorage.removeItem('token');    
+    localStorage.removeItem('usuario');    
     setUserType('');
 
     navigate('/login');

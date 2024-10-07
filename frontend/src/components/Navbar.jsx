@@ -29,7 +29,7 @@ const Navbar = () => {
                         <NavLink to='/owners' className="nav-link">Propietarios</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to='/signin' className="nav-link">Registrar</NavLink>
+                        <NavLink to='/signup' className="nav-link">Registrar</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to='/login' className="nav-link">Ingresar</NavLink>

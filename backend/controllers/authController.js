@@ -56,6 +56,8 @@ export const logIn = async (req, res) => {
       { expiresIn: '1h' }
     );
 
+    const nombre = usuario.nombre + ' ' + usuario.apellido;
+
     res.status(200).json({
       mensaje: 'Inicio de sesión exitoso',
       token,
@@ -63,6 +65,7 @@ export const logIn = async (req, res) => {
         usuario_id: usuario.usuario_id,
         tipo_usuario: usuario.tipo_usuario,
         correo_electronico: usuario.correo_electronico,
+        nombre_usuario: nombre
       }
     });
   } catch (error) {

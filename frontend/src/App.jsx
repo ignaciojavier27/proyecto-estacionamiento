@@ -21,7 +21,6 @@ function App() {
     if (token) {
       const user = JSON.parse(atob(token.split(".")[1]));
       setUserType(user.tipo_usuario);
-      console.log(user.tipo_usuario);
     }
   }, []);
 

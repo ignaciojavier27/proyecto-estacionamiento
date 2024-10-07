@@ -4,7 +4,7 @@ import '../assets/styles/owners.css'
 const OwnersScreen = () => {
   return (
     <main>
-      <section className="container-desarrollo container-full bg-white py-5">
+      <section className="container-desarrollo container-full bg-white d-flex align-items-center">
         <article className="container-md container-desarrollo-info">
           <h2>Promociona tu estacionamiento y aumenta tus ingresos</h2>
           <p className="mt-3">
@@ -15,7 +15,7 @@ const OwnersScreen = () => {
         </article>
       </section>
 
-      <section className="container-beneficios py-5">
+      <section className="container-beneficios">
         <div className="container-md">
           <h3 className="text-center">¿Qué te ofrecemos?</h3>
           <ul className="beneficios-list mt-4">

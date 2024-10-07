@@ -34,7 +34,7 @@ const Map = () => {
 
 
   return (
-    <section className='container-fluid'>
+    <section className='container-fluid m-0 p-0'>
         <MapContainer center={defaultMapPosition} zoom={15} style={{ height: '90vh', width: '100%' }}>
         <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
